@@ -1,94 +1,390 @@
-<html lang='en'><head><meta charset='UTF-8'><title>Jonathan "Joni" Hendrickson - Resume</title><style>body {
-  color: #000;
-  background: #eee;
+<html lang='en'><head><meta charset='UTF-8'><title>Joni Hendrickson - Resume</title><style>/* CHAOS REIGNS */
+
+@keyframes rainbow-bg {
+  0% {
+    background: #ff00ff;
+  }
+  16% {
+    background: #00ff00;
+  }
+  33% {
+    background: #ffff00;
+  }
+  50% {
+    background: #00ffff;
+  }
+  66% {
+    background: #ff8800;
+  }
+  83% {
+    background: #8800ff;
+  }
+  100% {
+    background: #ff0000;
+  }
+}
+
+@keyframes spin-wildly {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes wobble {
+  0% {
+    transform: skew(0deg, 0deg) scale(1);
+  }
+  25% {
+    transform: skew(15deg, -10deg) scale(1.2);
+  }
+  50% {
+    transform: skew(-20deg, 15deg) scale(0.8);
+  }
+  75% {
+    transform: skew(10deg, 20deg) scale(1.3);
+  }
+  100% {
+    transform: skew(0deg, 0deg) scale(1);
+  }
+}
+
+@keyframes bounce-text {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-3deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(3deg);
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    text-shadow:
+      0 0 10px #ff00ff,
+      0 0 20px #00ffff,
+      0 0 30px #ffff00;
+  }
+  50% {
+    text-shadow:
+      0 0 30px #ff0000,
+      0 0 50px #00ff00,
+      0 0 70px #0000ff;
+  }
+}
+
+@keyframes blink-crazy {
+  0%,
+  49% {
+    opacity: 1;
+    color: #ff00ff;
+  }
+  50%,
+  100% {
+    opacity: 0.3;
+    color: #00ff00;
+  }
+}
+
+body {
+  color: #ff00ff;
+  background: #000;
   font:
-    1.1em "Times New Roman",
-    serif;
+    1.1em "Comic Sans MS",
+    "Papyrus",
+    "Impact",
+    fantasy;
   line-height: 1.2;
-  margin: 40px 0;
+  margin: 0;
+  padding: 20px;
+  animation: rainbow-bg 2s infinite linear;
+  cursor: crosshair;
 }
 
 hr {
   border: none;
-  /* Remove the default border */
-  border-top: 1px solid black;
-  /* Add a black top border */
+  height: 12px;
+  background: repeating-linear-gradient(
+    45deg,
+    #ff00ff,
+    #ff00ff 10px,
+    #00ff00 10px,
+    #00ff00 20px,
+    #ffff00 20px,
+    #ffff00 30px
+  );
+  border-radius: 50px;
+  margin: 30px 0;
+  box-shadow: 0 0 20px #ff0000;
 }
 
 #resume {
   margin: 0 auto;
   max-width: 900px;
-  padding: 40px 60px;
-  background: #fff;
-  border: 1px solid #ccc;
-  box-shadow: 2px 2px 4px #aaa;
+  padding: 60px;
+  background: rgba(0, 0, 0, 0.7);
+  border: 8px dashed #00ffff;
+  border-radius: 200px 20px 200px 20px;
+  box-shadow:
+    0 0 80px #ff00ff,
+    inset 0 0 40px #ffff00;
+  backdrop-filter: blur(3px) hue-rotate(90deg);
+  transform: perspective(1000px) rotateX(5deg) rotateY(-3deg);
 }
 
 h1 {
   text-transform: uppercase;
   text-align: center;
-  font-size: 200%;
+  font-size: 400%;
+  font-family: "Impact", "Comic Sans MS", fantasy;
   margin: 0;
-  padding: 0;
+  padding: 20px;
+  color: #ffff00;
+  background: repeating-linear-gradient(90deg, #ff00ff, #00ffff, #ffff00, #ff00ff);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation:
+    wobble 1s infinite,
+    pulse-glow 0.5s infinite;
+  text-shadow: none;
+  letter-spacing: 10px;
+  transform: rotate(-2deg);
 }
 
 h2 {
-  border-bottom: 1px solid #000;
+  border-bottom: 5px dotted #ff00ff;
+  border-top: 5px dotted #00ffff;
   text-transform: uppercase;
-  font-size: 120%;
-  margin: 0.8em 0;
-  padding: 0;
+  font-size: 200%;
+  font-family: "Papyrus", "Comic Sans MS", fantasy;
+  margin: 40px 0;
+  padding: 15px;
+  color: #00ff00;
+  background: #4a0a4a;
+  text-align: center;
+  border-radius: 50%;
+  transform: rotate(1deg) skew(-5deg);
+  animation: bounce-text 1.5s infinite;
+  text-shadow:
+    3px 3px 0 #ff0000,
+    -3px -3px 0 #0000ff;
 }
 
 h3 {
-  font-size: 100%;
-  margin: 0.8em 0 0.3em;
-  padding: 0;
+  font-size: 150%;
+  font-family: "Comic Sans MS", "Brush Script MT", cursive;
+  margin: 30px 0 10px;
+  padding: 15px 25px;
   display: flex;
   justify-content: space-between;
+  color: #00ffff;
+  background: linear-gradient(135deg, #2a0a2a, #0a2a2a, #2a2a0a);
+  border: 4px solid #ffff00;
+  border-radius: 100px;
+  transform: rotate(-1deg);
+  box-shadow:
+    5px 5px 0 #ff00ff,
+    -5px -5px 0 #00ff00;
+  animation: wobble 2s infinite;
+}
+
+h3 span {
+  animation: spin-wildly 3s infinite linear;
+  display: inline-block;
 }
 
 #spacer {
   padding: 0;
   display: flex;
   justify-content: space-between;
+  color: #ff8800;
+  font-style: italic;
+  font-weight: bold;
+  text-shadow: 2px 2px 0 #ff0000;
 }
 
 p {
-  margin: 0 0 0.5em;
-  padding: 0;
+  margin: 0 0 1em;
+  padding: 10px;
+  color: #ffffff;
+  font-family: "Comic Sans MS", "Times New Roman", fantasy;
+  letter-spacing: 2px;
+  word-spacing: 5px;
+  line-height: 1.2;
 }
 
 ul {
-  padding: 0;
-  margin: 0 1.5em;
-  margin-bottom: 8px;
+  padding: 20px;
+  margin: 20px 2em;
+  margin-bottom: 20px;
+  list-style-type: square;
+  color: #00ff00;
+  background: rgba(255, 0, 255, 0.1);
+  border: 3px groove #ffff00;
+  border-radius: 50px;
+  font-family: "Comic Sans MS", fantasy;
 }
 
 /* ul immediately after h1 = contact list */
-h1+ul {
+h1 + ul {
   text-align: center;
-  margin: 0;
-  padding: 0;
+  margin: 20px 0;
+  padding: 20px;
+  background: rgba(0, 255, 255, 0.2);
+  border: 5px double #ff00ff;
+  border-radius: 100px;
+  animation: pulse-glow 1s infinite;
 }
 
-h1+ul>li {
+h1 + ul > li {
   display: inline;
   white-space: pre;
   list-style-type: none;
+  color: #ffff00;
+  font-size: 120%;
+  font-family: "Impact", fantasy;
+  text-shadow: 2px 2px 0 #ff0000;
+  animation: blink-crazy 0.7s infinite;
 }
 
-h1+ul>li::after {
-  content: "  \2022  ";
+h1 + ul > li::after {
+  content: "  \2605  ";
+  color: #ff00ff;
+  font-size: 150%;
 }
 
-h1+ul>li:last-child::after {
-  content: "";
+h1 + ul > li:last-child::after {
+  content: " \2605";
+  color: #ffff00;
+}
+
+/* Centering helper for use with attr_list */
+.center {
+  text-align: center;
+}
+
+/* Muted text helper for use with attr_list */
+.muted {
+  color: #ff8800;
+  font-style: italic;
+  font-family: "Brush Script MT", cursive;
+  font-size: 130%;
+  text-shadow: 1px 1px 0 #8800ff;
 }
 
 /* p immediately after contact list = summary */
-h1+ul+p {
-  margin: 1em 0;
+h1 + ul + p {
+  margin: 20px 0;
+  padding: 25px;
+  background: rgba(255, 255, 0, 0.1);
+  border: 4px wavy #00ffff;
+  border-radius: 80px;
+  font-size: 140%;
+  color: #ff00ff;
+  animation: bounce-text 2s infinite;
+}
+
+a:link {
+  color: #00ffff;
+  text-decoration: line-through;
+  font-weight: bold;
+  text-shadow: 2px 2px 0 #ff00ff;
+}
+a:visited {
+  color: #ff00ff;
+  text-decoration: line-through;
+}
+a:hover {
+  color: #ffff00;
+  text-decoration: underline overline line-through;
+  font-size: 150%;
+  animation: spin-wildly 0.5s infinite linear;
+  display: inline-block;
+}
+
+/* CSS for evenly spaced table with INSANE borders */
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 10px;
+  margin: 30px auto;
+  font-size: 1.1em;
+  background: repeating-conic-gradient(
+    #ff00ff 0deg 30deg,
+    #00ffff 30deg 60deg,
+    #ffff00 60deg 90deg
+  );
+  border-radius: 50px;
+  padding: 20px;
+  box-shadow: 0 0 50px #ff0000;
+  animation: spin-wildly 30s infinite linear;
+}
+
+table th,
+table td {
+  padding: 20px;
+  text-align: center;
+  width: 33.33%;
+  border: 5px ridge #ffff00;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.8);
+  color: #00ff00;
+  font-family: "Comic Sans MS", fantasy;
+  font-size: 1.1em;
+  box-shadow: inset 0 0 20px #ff00ff;
+}
+
+table th {
+  font-weight: bold;
+  color: #ffff00;
+  background: rgba(255, 0, 255, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  animation: blink-crazy 1s infinite;
+}
+
+table tr td:not(:last-child),
+table tr th:not(:last-child) {
+  border-right: 5px double #00ffff;
+}
+
+table tr:last-child td {
+  border-bottom: 5px double #ff00ff;
+}
+
+table tr {
+  animation: wobble 3s infinite;
+}
+
+table tr:nth-child(odd) {
+  transform: rotate(1deg);
+}
+
+table tr:nth-child(even) {
+  transform: rotate(-1deg);
+}
+
+/* Marquee effect for the first paragraph after contact list */
+h1 + ul + p::before {
+  content: "\2192 \2192 \2192 ";
+  animation: marquee 1s infinite linear;
+  display: inline-block;
+  color: #ffff00;
 }
 
 @media print {
@@ -97,38 +393,84 @@ h1+ul+p {
     margin: 0;
     padding: 0;
     background: none;
+    color: #ff00ff;
+    animation: none;
   }
 
   #resume {
     margin: 0;
-    padding: 0;
-    border: 0;
-    background: none;
+    padding: 20px;
+    border: 8px dashed #00ffff;
+    background: rgba(0, 0, 0, 0.9);
     box-shadow: none;
+    border-radius: 100px 10px 100px 10px;
+    transform: none;
   }
 
-  /* Do not underline abbr tags in PDF */
+  h1 {
+    color: #ffff00;
+    -webkit-text-fill-color: #ffff00;
+    animation: none;
+    text-shadow:
+      3px 3px 0 #ff0000,
+      -3px -3px 0 #0000ff;
+  }
+
+  h2 {
+    color: #00ff00;
+    border-bottom: 5px dotted #ff00ff;
+    border-top: 5px dotted #00ffff;
+    background: #4a0a4a;
+    border-radius: 50%;
+    animation: none;
+    transform: rotate(1deg);
+  }
+
+  h3 {
+    color: #00ffff;
+    border: 4px solid #ffff00;
+    border-radius: 100px;
+    background: linear-gradient(135deg, #2a0a2a, #0a2a2a);
+    animation: none;
+    transform: rotate(-1deg);
+  }
+
   abbr {
     text-decoration: none;
     font-variant: none;
   }
 
-  /* Make links black in PDF */
+  a:link {
+    color: #00ffff;
+    text-decoration: line-through;
+  }
+  a:visited {
+    color: #ff00ff;
+    text-decoration: line-through;
+  }
 
-  /* Move this outside the print block to apply this in HTML too */
-  a,
-  a:link,
-  a:visited,
-  a:hover {
-    color: #000;
-    text-decoration: underline;
+  table {
+    background: #000;
+    border-radius: 50px;
+    animation: none;
+  }
+
+  table th,
+  table td {
+    border: 3px ridge #ffff00;
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #00ff00;
+  }
+
+  ul {
+    border: 3px groove #ffff00;
+    border-radius: 50px;
+    color: #00ff00;
   }
 }
 
 @page {
-  /* Change margins and paper size of PDF */
-
-  /* https://developer.mozilla.org/en-US/docs/Web/CSS/@page */
   size: letter;
   margin: 0.5in 0.6in;
 }
@@ -138,161 +480,121 @@ h1+ul+p {
     font-size: 16pt;
     margin: 0;
     padding: 0;
-    background: #fff !important;
+    background: #000;
+    animation: rainbow-bg 1s infinite linear;
   }
 
   #resume {
     margin: 0;
     padding: 1em;
-    border: 0;
-    background: none;
-    box-shadow: none;
+    border: 5px dashed #00ffff;
+    background: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 40px #ff00ff;
+    border-radius: 50px;
   }
 }
-
-/* CSS for evenly spaced table with subtle borders */
-table {
-  width: 95%;
-  border-collapse: collapse;
-  margin: 0px auto;
-  /* Center the table horizontally */
-  font-size: 0.9em;
-  /* Set font size slightly lower than the body */
-}
-
-table th,
-table td {
-  padding: 6px;
-  text-align: left;
-  /* Align text to the left within each cell */
-  width: 33.33%;
-  /* Evenly distribute table cells */
-  border-bottom: 1px solid #ddd;
-  /* Subtle grey border between rows */
-}
-
-table th {
-  display: none;
-  /* Hide the header row */
-}
-
-table tr td:not(:last-child) {
-  border-right: 1px solid #ddd;
-  /* Subtle grey border between columns */
-}
-
-table tr:last-child td {
-  border-bottom: none;
-  /* Remove bottom border on the last row */
-}</style></head><body><div id='resume'><h1>Jonathan &ldquo;Joni&rdquo; Hendrickson</h1>
+</style></head><body><div id='resume'><h1>Joni Hendrickson</h1>
 <ul>
-<li><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#104;&#101;&#110;&#100;&#114;&#105;&#99;&#107;&#115;&#111;&#110;&#64;&#106;&#111;&#110;&#105;&#46;&#115;&#105;&#116;&#101;">&#104;&#101;&#110;&#100;&#114;&#105;&#99;&#107;&#115;&#111;&#110;&#64;&#106;&#111;&#110;&#105;&#46;&#115;&#105;&#116;&#101;</a></li>
-<li><a href="https://github.com/averagewagon">github.com/averagewagon</a></li>
-<li><a href="https://www.linkedin.com/in/jonathan-r-hendrickson/">linkedin.com/in/jonathan-r-hendrickson</a></li>
+<li><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#99;&#111;&#110;&#116;&#97;&#99;&#116;&#64;&#106;&#111;&#110;&#105;&#46;&#115;&#105;&#116;&#101;">&#99;&#111;&#110;&#116;&#97;&#99;&#116;&#64;&#106;&#111;&#110;&#105;&#46;&#115;&#105;&#116;&#101;</a></li>
+<li><a href="https://github.com/hello-joni">github.com/hello-joni</a></li>
+<li><a href="https://www.linkedin.com/in/joni-hendrickson/">linkedin.com/in/joni-hendrickson</a></li>
 </ul>
-<p>Seattle-based embedded software engineer with experience developing
-microcontrollers, IoT solutions, and satellite firmware. Skilled at delivering
-efficient, reliable, and maintainable embedded applications.</p>
+<p class="center"><strong>Seattle-based embedded systems engineer with experience in agricultural robotics, satellites, and
+IoT.</strong><br /></p>
+<p class="center muted"><em>Maker, open source contributor, hardware conference speaker, and <code>man</code> page reader.</em><br /></p>
 <table>
 <thead>
 <tr>
-<th>COLUMN 1</th>
-<th>COLUMN 2</th>
-<th>COLUMN 3</th>
+<th>Microcontrollers</th>
+<th>Embedded Linux</th>
+<th>Electronics</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>C, Rust, Python, C++ programming</td>
-<td>Microcontrollers (STM32, Espressif, RPi)</td>
-<td>FreeRTOS, Embedded Linux, ROS</td>
+<td>MISRA C, FreeRTOS, Zephyr, MicroPython</td>
+<td>C, Rust, C++, Scripting (Bash, Python)</td>
+<td>SWD/JTAG, Logic Analyzer, Oscilloscope</td>
 </tr>
 <tr>
-<td>Serial comms (UART, SPI, I2C, CAN)</td>
-<td>Networking (TCP/IP, HTTP, MQTT, BLE)</td>
-<td>Motors, Control Systems, PID</td>
+<td>CAN, UART, SPI, I2C, Network</td>
+<td>Yocto, networking, drivers, build tools</td>
+<td>Motors, Sensors, Batteries, Cameras</td>
 </tr>
 <tr>
-<td>Sensors (weight, distance, cameras)</td>
-<td>Build systems (GNU Make, CMake)</td>
-<td>Git, CI/CD, shell scripting</td>
+<td>OTA, Observability, HITL CI/CD</td>
+<td>Docker, Ansible, systemd, ROS, NVIDIA</td>
+<td>PCB bring-up, manufacture, hardware debug</td>
 </tr>
 </tbody>
 </table>
+<p class="center"><em>Functional safety experience with IEC 61508 (electronic systems) and ISO 18497 (autonomous
+agricultural machinery).</em><br /></p>
 <hr />
-<h3><span>Amazon &ndash; Software Development Engineer II</span> <span>Seattle, WA</span></h3>
-<p><span id="spacer"><span><em>Amazon Go / Just Walk Out &ndash; MCU Firmware</span>
-<span>Oct 2024 &ndash; Current</em></span></span></p>
+<h3><span>Bonsai Robotics &ndash; Senior Embedded Platform Engineer</span> <span>Mar 2026 &ndash; Current</span></h3>
+<p class="muted"><em>Autonomous electric tractors and other agricultural equipment</em><br /></p>
 <ul>
-<li>Developed hardware/firmware for motor control, weight sensors, cameras, and
-  IoT on Embedded Linux and FreeRTOS</li>
-<li>Brought up a new motorized gate, writing firmware in C / C++ / Java and tuning
-  PID parameters for steppers and BLDCs</li>
-<li>Traveled on-site to deploy and validate embedded systems on-site, developing
-  solutions to recurring problems</li>
-<li>Brought up, validated, and revised new PCBs for power delivery and USB/I2C/SPI
-  control with FTDI FT4232HQ</li>
+<li>Developed the embedded Linux platform for electric tractors on NVIDIA Jetson Orin using Yocto,
+  owning board bring-up, image builds, and system services</li>
+<li>Built fleet management tooling with Ansible and Tailscale networking to deploy, configure, and
+  update fielded tractor platforms remotely</li>
+<li>Developed STM32 firmware over CAN bus and I2C for traction and motor control, battery management,
+  and remote control subsystems</li>
+<li>Implemented an LVGL-based operator display for vehicle status and control</li>
 </ul>
-<p><span id="spacer"><span><em>Project Kuiper &ndash; Satellite Embedded Software</span>
-<span>Aug 2023 &ndash; Oct 2024</em></span></span></p>
+<h3><span>Amazon &ndash; Embedded Software Engineer</span> <span>Sept 2021 &ndash; Dec 2025</span></h3>
+<p class="muted"><em>Satellites, FreeRTOS, and retail store weight sensors/gates/cameras/networking</em><br /></p>
+<p><span id="spacer"><span><em>Amazon Go / Just Walk Out &ndash; MCU Firmware</span> <span>Oct 2024 &ndash;
+Current</em></span></span></p>
 <ul>
-<li>Maintained and expanded a framework for modular satellite applications in Rust
-  and C++ on Embedded Linux</li>
-<li>Improved IPC, telemetry, storage, and logging systems, porting key components
-  from C++ to Rust</li>
-<li>Enhanced fault tolerance mechanisms, including health monitoring, watchdogs,
-  and time synchronization</li>
+<li>Developed hardware/firmware for motor control, weight sensors, cameras, and IoT on Embedded Linux
+  and FreeRTOS</li>
+<li>Brought up a new motorized gate, writing firmware in C / C++ / Java and tuning PID parameters for
+  steppers and BLDCs</li>
+<li>Traveled on-site to deploy and validate embedded systems on-site, developing solutions to
+  recurring problems</li>
+<li>Brought up, validated, and revised new PCBs for power delivery and USB/I2C/SPI control with FTDI
+  FT4232HQ</li>
+</ul>
+<p><span id="spacer"><span><em>Project Kuiper &ndash; Satellite Embedded Software</span> <span>Aug 2023 &ndash; Oct
+2024</em></span></span></p>
+<ul>
+<li>Maintained and expanded a framework for modular satellite applications in Rust and C++ on Embedded
+  Linux</li>
+<li>Improved IPC, telemetry, storage, and logging systems, porting key components from C++ to Rust</li>
+<li>Enhanced fault tolerance mechanisms, including health monitoring, watchdogs, and time
+  synchronization</li>
+</ul>
+<p><span id="spacer"><span><em>FreeRTOS Maintainer</em></span> <span>Sept 2021 &ndash; Aug 2023</span></span></p>
+<ul>
+<li>Developed MISRA-compliant embedded C libraries for FreeRTOS, including provisioning, HTTP, and OTA
+  updates</li>
+<li>Wrote firmware for AWS IoT ExpressLink, implementing MQTT and BLE GAP/GATT communication over UART</li>
+<li>Built a GitLab CI/CD pipeline for Linux/RPi testbeds, automating Pytest-based firmware integration
+  tests</li>
+</ul>
+<h3><span>Avanade &ndash; Software Developer Intern</span> <span>June 2021 &ndash; Aug 2021</span></h3>
+<ul>
+<li>Developed interactive AltspaceVR features in Node.js, including virtual games and in-app item
+  systems</li>
 </ul>
 <h3><span>Amazon Web Services &ndash; Software Development Engineer I/II</span> <span>Seattle, WA</span></h3>
-<p><span id="spacer"><span><em>FreeRTOS Maintainer</em></span> <span>Sept 2021 &ndash; Aug
-2023</span></span></p>
-<ul>
-<li>Developed MISRA-compliant embedded C libraries for FreeRTOS, including
-  provisioning, HTTP, and OTA updates</li>
-<li>Wrote firmware for AWS IoT ExpressLink, implementing MQTT and BLE GAP/GATT
-  communication over UART</li>
-<li>Built a GitLab CI/CD pipeline for Linux/RPi testbeds, automating Pytest-based
-  firmware integration tests</li>
-</ul>
-<h3><span>Avanade &ndash; Software Developer Intern</span> <span>Seattle, WA</span></h3>
-<p><span id="spacer"><span><em>Altspace VR and Microsoft Teams integrations</span>
-<span>June 2021 &ndash; Aug 2021</em></span></span></p>
-<ul>
-<li>Developed interactive AltspaceVR features in Node.js, including virtual games
-  and in-app item systems</li>
-<li>Participated in agile development, code reviews, and cloud-based deployments
-  using Microsoft Azure</li>
-</ul>
-<h3><span>cEDH Decklist Database &ndash; Web Developer</span> <span>Olympia, WA</span></h3>
-<p><span id="spacer"><span><em><a href="https://cedh-decklist-database.com">cedh-decklist-database.com</a></span>
-<span>June 2020 &ndash; Mar 2021</em></span></span></p>
-<ul>
-<li>Built a website with an AWS-powered backend for browsing and submitting Magic:
-  The Gathering decklists</li>
-<li>Integrated sponsorships and Google AdSense revenue streams to cover server
-  costs and generate revenue</li>
-</ul>
 <h2>Projects</h2>
-<h3><span>Treadward - Treaded SLAM Robot</span> <span>July 2025 &ndash; Current</span></h3>
+<h3><span><a href="https://joni-on-micro.site">joni-on-micro.site</a> - Microcontroller-Based Web Server</span> <span>Jan 2025</span></h3>
 <ul>
-<li>Incorporated a Raspberry Pi 5, camera module, and BLDC motor controller into a
-  rover chassis</li>
-<li>Uses ROS 2 to autonomously map and navigate my apartment using slam-toolbox</li>
+<li>Built an embedded web server on an ESP32-S3 using LittleFS and esp-httpd to serve a static blog
+  site</li>
+<li><a href="https://www.crowdsupply.com/teardown/portland-2025/short-talk/joni-on-microsite-hosting-a-blog-on-a-microcontroller">Teardown 2025 hardware conference talk</a></li>
 </ul>
-<h3><span>Joni on Microsite - Microcontroller-Based Web Server</span> <span>Dec 2024 &ndash; Mar 2025</span></h3>
-<p><span id="spacer"><span><em><a href="https://joni-on-micro.site">joni-on-micro.site</a></span>
-<span></span><a href="https://github.com/averagewagon/microsite">GitHub Repository</a></em></span></p>
+<h3><span><a href="https://cedh-decklist-database.com/">cedh-decklist-database.com</a> &ndash; Web Developer</span> <span>June 2018</span></h3>
 <ul>
-<li>Built an embedded web server on an ESP32-S3 using LittleFS and esp-httpd to
-  serve a static blog site</li>
-<li>Developed a custom POSIX shell-based static site generator for content
-  bundling and compression</li>
+<li>Built a website with an AWS-powered backend for browsing and submitting Magic: The Gathering
+  decklists</li>
 </ul>
 <h2>Education</h2>
 <h3><span>University of Washington Bothell &ndash; BS Computer Science &amp; Software Engineering</span> <span>Sept 2018 &ndash; Aug 2021</span></h3>
 <ul>
-<li>GPA: 3.77 | Courses: Operating Systems, Hardware and Computer Organization,
-  Data Structures and Algorithms</li>
-<li>As a Teaching Assistant for CSE 180: taught data manipulation, visualization,
-  and statistics</li>
+<li>GPA: 3.77 | Courses: Operating Systems, Hardware and Computer Organization, Data Structures and
+  Algorithms</li>
+<li>As a Teaching Assistant for CSE 180: taught data manipulation, visualization, and statistics</li>
 </ul></div></body></html>

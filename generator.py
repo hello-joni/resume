@@ -116,7 +116,7 @@ def make_html(md: str, css: str) -> str:
     postamble = "</div></body></html>"
     return (
         preamble
-        + markdown.markdown(md, extensions=["smarty", "abbr", "tables"])
+        + markdown.markdown(md, extensions=["smarty", "abbr", "tables", "attr_list"])
         + postamble
     )
 

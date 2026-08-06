@@ -1,0 +1,358 @@
+/* CHAOS REIGNS (static edition) */
+
+body {
+  color: #ff00ff;
+  background: #000;
+  font:
+    1.1em "Comic Sans MS",
+    "Papyrus",
+    "Impact",
+    fantasy;
+  line-height: 1.8;
+  margin: 0;
+  padding: 20px;
+}
+
+hr {
+  border: none;
+  height: 12px;
+  background: repeating-linear-gradient(
+    45deg,
+    #ff00ff,
+    #ff00ff 10px,
+    #00ff00 10px,
+    #00ff00 20px,
+    #ffff00 20px,
+    #ffff00 30px
+  );
+  border-radius: 50px;
+  margin: 30px 0;
+  box-shadow: 0 0 20px #ff0000;
+}
+
+#resume {
+  margin: 0 auto;
+  max-width: 900px;
+  padding: 60px;
+  background: rgba(0, 0, 0, 0.7);
+  border: none;
+  box-shadow:
+    0 0 80px #ff00ff,
+    inset 0 0 40px #ffff00;
+}
+
+h1 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 400%;
+  font-family: "Impact", "Comic Sans MS", fantasy;
+  margin: 0;
+  padding: 20px;
+  color: #ffff00;
+  background: repeating-linear-gradient(90deg, #ff00ff, #00ffff, #ffff00, #ff00ff);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 10px;
+  transform: rotate(-2deg);
+}
+
+h2 {
+  border-bottom: 5px dotted #ff00ff;
+  border-top: 5px dotted #00ffff;
+  text-transform: uppercase;
+  font-size: 200%;
+  font-family: "Papyrus", "Comic Sans MS", fantasy;
+  margin: 40px 0;
+  padding: 15px;
+  color: #00ff00;
+  background: #4a0a4a;
+  text-align: center;
+  border-radius: 50%;
+  transform: rotate(1deg) skew(-5deg);
+  text-shadow:
+    3px 3px 0 #ff0000,
+    -3px -3px 0 #0000ff;
+}
+
+h3 {
+  font-size: 150%;
+  font-family: "Comic Sans MS", "Brush Script MT", cursive;
+  margin: 30px 0 10px;
+  padding: 15px 25px;
+  display: flex;
+  justify-content: space-between;
+  color: #00ffff;
+  background: linear-gradient(135deg, #2a0a2a, #0a2a2a, #2a2a0a);
+  border: 4px solid #ffff00;
+  border-radius: 100px;
+  transform: rotate(-1deg);
+  box-shadow:
+    5px 5px 0 #ff00ff,
+    -5px -5px 0 #00ff00;
+}
+
+#spacer {
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  color: #ff8800;
+  font-style: italic;
+  font-weight: bold;
+  text-shadow: 2px 2px 0 #ff0000;
+}
+
+p {
+  margin: 0 0 1em;
+  padding: 10px;
+  color: #ffffff;
+  font-family: "Comic Sans MS", "Times New Roman", fantasy;
+  letter-spacing: 2px;
+  word-spacing: 5px;
+  line-height: 2;
+}
+
+ul {
+  padding: 20px;
+  margin: 20px 2em;
+  margin-bottom: 20px;
+  list-style-type: square;
+  color: #00ff00;
+  background: rgba(255, 0, 255, 0.1);
+  border: 3px groove #ffff00;
+  border-radius: 50px;
+  font-family: "Comic Sans MS", fantasy;
+}
+
+/* ul immediately after h1 = contact list */
+h1 + ul {
+  text-align: center;
+  margin: 20px 0;
+  padding: 20px;
+  background: rgba(0, 255, 255, 0.2);
+  border: 5px double #ff00ff;
+  border-radius: 100px;
+}
+
+h1 + ul > li {
+  display: inline;
+  white-space: pre;
+  list-style-type: none;
+  color: #ffff00;
+  font-size: 120%;
+  font-family: "Impact", fantasy;
+  text-shadow: 2px 2px 0 #ff0000;
+}
+
+h1 + ul > li::after {
+  content: "  \2605  ";
+  color: #ff00ff;
+  font-size: 150%;
+}
+
+h1 + ul > li:last-child::after {
+  content: " \2605";
+  color: #ffff00;
+}
+
+/* Centering helper for use with attr_list */
+.center {
+  text-align: center;
+}
+
+/* Muted text helper for use with attr_list */
+.muted {
+  color: #ff8800;
+  font-style: italic;
+  font-family: "Brush Script MT", cursive;
+  font-size: 130%;
+  text-shadow: 1px 1px 0 #8800ff;
+}
+
+/* p immediately after contact list = summary */
+h1 + ul + p {
+  margin: 20px 0;
+  padding: 25px;
+  background: rgba(255, 255, 0, 0.1);
+  border: 4px wavy #00ffff;
+  border-radius: 80px;
+  font-size: 140%;
+  color: #ff00ff;
+}
+
+a:link {
+  color: #00ffff;
+  text-decoration: line-through;
+  font-weight: bold;
+  text-shadow: 2px 2px 0 #ff00ff;
+}
+a:visited {
+  color: #ff00ff;
+  text-decoration: line-through;
+}
+a:hover {
+  color: #ffff00;
+  text-decoration: underline overline line-through;
+}
+
+/* CSS for evenly spaced table with INSANE borders */
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 10px;
+  margin: 30px auto;
+  font-size: 1.1em;
+  background: repeating-conic-gradient(
+    #ff00ff 0deg 30deg,
+    #00ffff 30deg 60deg,
+    #ffff00 60deg 90deg
+  );
+  border-radius: 50px;
+  padding: 20px;
+  box-shadow: 0 0 50px #ff0000;
+}
+
+table th,
+table td {
+  padding: 20px;
+  text-align: center;
+  width: 33.33%;
+  border: 5px ridge #ffff00;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.8);
+  color: #00ff00;
+  font-family: "Comic Sans MS", fantasy;
+  font-size: 1.1em;
+  box-shadow: inset 0 0 20px #ff00ff;
+}
+
+table th {
+  font-weight: bold;
+  color: #ffff00;
+  background: rgba(255, 0, 255, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+table tr td:not(:last-child),
+table tr th:not(:last-child) {
+  border-right: 5px double #00ffff;
+}
+
+table tr:last-child td {
+  border-bottom: 5px double #ff00ff;
+}
+
+table tr:nth-child(odd) {
+  transform: rotate(1deg);
+}
+
+table tr:nth-child(even) {
+  transform: rotate(-1deg);
+}
+
+@media print {
+  body {
+    font-size: 10pt;
+    margin: 0;
+    padding: 0;
+    background: #000;
+    color: #ff00ff;
+  }
+
+  #page-wrapper {
+    padding: 0.5in 0.6in;
+    background: #000;
+  }
+
+  #resume {
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: rgba(0, 0, 0, 0.9);
+    box-shadow: none;
+    border-radius: 0;
+  }
+
+  h1 {
+    color: #ffff00;
+    -webkit-text-fill-color: #ffff00;
+    text-shadow:
+      3px 3px 0 #ff0000,
+      -3px -3px 0 #0000ff;
+  }
+
+  h2 {
+    color: #00ff00;
+    border-bottom: 5px dotted #ff00ff;
+    border-top: 5px dotted #00ffff;
+    background: #4a0a4a;
+    border-radius: 50%;
+    transform: rotate(1deg);
+  }
+
+  h3 {
+    color: #00ffff;
+    border: 4px solid #ffff00;
+    border-radius: 100px;
+    background: linear-gradient(135deg, #2a0a2a, #0a2a2a);
+    transform: rotate(-1deg);
+  }
+
+  abbr {
+    text-decoration: none;
+    font-variant: none;
+  }
+
+  a:link {
+    color: #00ffff;
+    text-decoration: line-through;
+  }
+  a:visited {
+    color: #ff00ff;
+    text-decoration: line-through;
+  }
+
+  table {
+    background: #000;
+    border-radius: 50px;
+  }
+
+  table th,
+  table td {
+    border: 3px ridge #ffff00;
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #00ff00;
+  }
+
+  ul {
+    border: 3px groove #ffff00;
+    border-radius: 50px;
+    color: #00ff00;
+  }
+}
+
+@page {
+  size: letter;
+  margin: 0;
+}
+
+@media screen and (width <=800px) {
+  body {
+    font-size: 16pt;
+    margin: 0;
+    padding: 0;
+    background: #000;
+  }
+
+  #resume {
+    margin: 0;
+    padding: 1em;
+    border: 5px dashed #00ffff;
+    background: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 40px #ff00ff;
+    border-radius: 50px;
+  }
+}

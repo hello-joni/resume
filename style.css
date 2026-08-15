@@ -1,3 +1,11 @@
+.center {
+  text-align: center;
+}
+
+.muted {
+  color: #333;
+}
+
 body {
   color: #000;
   background: #eee;
@@ -66,28 +74,28 @@ ul {
 }
 
 /* ul immediately after h1 = contact list */
-h1+ul {
+h1 + ul {
   text-align: center;
   margin: 0;
   padding: 0;
 }
 
-h1+ul>li {
+h1 + ul > li {
   display: inline;
   white-space: pre;
   list-style-type: none;
 }
 
-h1+ul>li::after {
+h1 + ul > li::after {
   content: "  \2022  ";
 }
 
-h1+ul>li:last-child::after {
+h1 + ul > li:last-child::after {
   content: "";
 }
 
 /* p immediately after contact list = summary */
-h1+ul+p {
+h1 + ul + p {
   margin: 1em 0;
 }
 

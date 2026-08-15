@@ -1,100 +1,99 @@
-# Jonathan "Joni" Hendrickson
+# Joni Hendrickson
 
-- <hendrickson@joni.site>
-- [github.com/averagewagon](https://github.com/averagewagon)
-- [linkedin.com/in/jonathan-r-hendrickson](https://www.linkedin.com/in/jonathan-r-hendrickson/)
+- <contact@joni.site>
+- [github.com/hello-joni](https://github.com/hello-joni)
+- [linkedin.com/in/joni-hendrickson](https://www.linkedin.com/in/joni-hendrickson/)
 
-Seattle-based embedded software engineer with experience developing
-microcontrollers, IoT solutions, and satellite firmware. Skilled at delivering
-efficient, reliable, and maintainable embedded applications.
+**Seattle-based embedded systems engineer with experience in agricultural robotics, satellites, and
+IoT.**  
+{: .center }
 
-| COLUMN 1                            | COLUMN 2                                 | COLUMN 3                      |
-| ----------------------------------- | ---------------------------------------- | ----------------------------- |
-| C, Rust, Python, C++ programming    | Microcontrollers (STM32, Espressif, RPi) | FreeRTOS, Embedded Linux, ROS |
-| Serial comms (UART, SPI, I2C, CAN)  | Networking (TCP/IP, HTTP, MQTT, BLE)     | Motors, Control Systems, PID  |
-| Sensors (weight, distance, cameras) | Build systems (GNU Make, CMake)          | Git, CI/CD, shell scripting   |
+_Maker, open source contributor, hardware conference speaker, and `man` page reader._  
+{: .center .muted }
+
+| Microcontrollers               | Embedded Linux                       | Electronics                               |
+| ------------------------------ | ------------------------------------ | ----------------------------------------- |
+| MISRA C, Embedded Rust         | C, Rust, Scripting (Bash, Python)    | SWD/JTAG, Logic Analyzer, Oscilloscope    |
+| CAN, UART, SPI, I2C, Network   | Yocto, Ansible, OpenTofu (Terraform) | Motors, Sensors, Batteries, Cameras       |
+| OTA, Observability, HITL CI/CD | Docker, ROS, systemd, NVIDIA Jetsons | PCB bring-up, manufacture, hardware debug |
+
+_Functional safety experience with IEC 61508 (electronic systems) and ISO 18497 (autonomous
+agricultural machinery)._  
+{: .center }
 
 ---
 
-### <span>Amazon -- Software Development Engineer II</span> <span>Seattle, WA</span>
+### <span>Bonsai Robotics -- Senior Embedded Platform Engineer</span> <span>Mar 2026 -- Current</span>
 
-<span id="spacer"><span>_Amazon Go / Just Walk Out -- MCU Firmware</span>
-<span>Oct 2024 -- Current_</span></span>
+_Autonomous electric tractors and other agricultural equipment_  
+{: .muted }
 
-- Developed hardware/firmware for motor control, weight sensors, cameras, and
-  IoT on Embedded Linux and FreeRTOS
-- Brought up a new motorized gate, writing firmware in C / C++ / Java and tuning
-  PID parameters for steppers and BLDCs
-- Traveled on-site to deploy and validate embedded systems on-site, developing
-  solutions to recurring problems
-- Brought up, validated, and revised new PCBs for power delivery and USB/I2C/SPI
-  control with FTDI FT4232HQ
+- Developed the embedded Linux platform for electric tractors on NVIDIA Jetson Orin using Yocto,
+  owning board bring-up, image builds, and system services
+- Built fleet management tooling with Ansible and Tailscale networking to deploy, configure, and
+  update fielded tractor platforms remotely
+- Developed STM32 firmware over CAN bus and I2C for traction and motor control, battery management,
+  and remote control subsystems
+- Implemented an LVGL-based operator display for vehicle status and control
 
-<span id="spacer"><span>_Project Kuiper -- Satellite Embedded Software</span>
-<span>Aug 2023 -- Oct 2024_</span></span>
+### <span>Amazon -- Embedded Software Engineer</span> <span>Sept 2021 -- Dec 2025</span>
 
-- Maintained and expanded a framework for modular satellite applications in Rust
-  and C++ on Embedded Linux
-- Improved IPC, telemetry, storage, and logging systems, porting key components
-  from C++ to Rust
-- Enhanced fault tolerance mechanisms, including health monitoring, watchdogs,
-  and time synchronization
+_Satellites, FreeRTOS, and retail store weight sensors/gates/cameras/networking_  
+{: .muted }
+
+<span id="spacer"><span>_Amazon Go / Just Walk Out -- MCU Firmware</span> <span>Oct 2024 --
+Current_</span></span>
+
+- Developed hardware/firmware for motor control, weight sensors, cameras, and IoT on Embedded Linux
+  and FreeRTOS
+- Brought up a new motorized gate, writing firmware in C / C++ / Java and tuning PID parameters for
+  steppers and BLDCs
+- Traveled on-site to deploy and validate embedded systems on-site, developing solutions to
+  recurring problems
+- Brought up, validated, and revised new PCBs for power delivery and USB/I2C/SPI control with FTDI
+  FT4232HQ
+
+<span id="spacer"><span>_Project Kuiper -- Satellite Embedded Software</span> <span>Aug 2023 -- Oct
+2024_</span></span>
+
+- Maintained and expanded a framework for modular satellite applications in Rust and C++ on Embedded
+  Linux
+- Improved IPC, telemetry, storage, and logging systems, porting key components from C++ to Rust
+- Enhanced fault tolerance mechanisms, including health monitoring, watchdogs, and time
+  synchronization
+
+<span id="spacer"><span>_FreeRTOS Maintainer_</span> <span>Sept 2021 -- Aug 2023</span></span>
+
+- Developed MISRA-compliant embedded C libraries for FreeRTOS, including provisioning, HTTP, and OTA
+  updates
+- Wrote firmware for AWS IoT ExpressLink, implementing MQTT and BLE GAP/GATT communication over UART
+- Built a GitLab CI/CD pipeline for Linux/RPi testbeds, automating Pytest-based firmware integration
+  tests
+
+### <span>Avanade -- Software Developer Intern</span> <span>June 2021 -- Aug 2021</span>
+
+- Developed interactive AltspaceVR features in Node.js, including virtual games and in-app item
+  systems
 
 ### <span>Amazon Web Services -- Software Development Engineer I/II</span> <span>Seattle, WA</span>
 
-<span id="spacer"><span>_FreeRTOS Maintainer_</span> <span>Sept 2021 -- Aug
-2023</span></span>
-
-- Developed MISRA-compliant embedded C libraries for FreeRTOS, including
-  provisioning, HTTP, and OTA updates
-- Wrote firmware for AWS IoT ExpressLink, implementing MQTT and BLE GAP/GATT
-  communication over UART
-- Built a GitLab CI/CD pipeline for Linux/RPi testbeds, automating Pytest-based
-  firmware integration tests
-
-### <span>Avanade -- Software Developer Intern</span> <span>Seattle, WA</span>
-
-<span id="spacer"><span>_Altspace VR and Microsoft Teams integrations</span>
-<span>June 2021 -- Aug 2021_</span></span>
-
-- Developed interactive AltspaceVR features in Node.js, including virtual games
-  and in-app item systems
-- Participated in agile development, code reviews, and cloud-based deployments
-  using Microsoft Azure
-
-### <span>cEDH Decklist Database -- Web Developer</span> <span>Olympia, WA</span>
-
-<span id="spacer"><span>_[cedh-decklist-database.com](https://cedh-decklist-database.com)</span>
-<span>June 2020 -- Mar 2021_</span></span>
-
-- Built a website with an AWS-powered backend for browsing and submitting Magic:
-  The Gathering decklists
-- Integrated sponsorships and Google AdSense revenue streams to cover server
-  costs and generate revenue
-
 ## Projects
 
-### <span>Treadward - Treaded SLAM Robot</span> <span>July 2025 -- Current</span>
+### <span>[joni-on-micro.site](https://joni-on-micro.site) - Microcontroller-Based Web Server</span> <span>Jan 2025</span>
 
-- Incorporated a Raspberry Pi 5, camera module, and BLDC motor controller into a
-  rover chassis
-- Uses ROS 2 to autonomously map and navigate my apartment using slam-toolbox
+- Built an embedded web server on an ESP32-S3 using LittleFS and esp-httpd to serve a static blog
+  site
+- [Teardown 2025 hardware conference talk](https://www.crowdsupply.com/teardown/portland-2025/short-talk/joni-on-microsite-hosting-a-blog-on-a-microcontroller)
 
-### <span>Joni on Microsite - Microcontroller-Based Web Server</span> <span>Dec 2024 -- Mar 2025</span>
+### <span>[cedh-decklist-database.com](https://cedh-decklist-database.com/) -- Web Developer</span> <span>June 2018</span>
 
-<span id="spacer"><span>_[joni-on-micro.site](https://joni-on-micro.site)</span>
-<span></span>[GitHub Repository](https://github.com/averagewagon/microsite)_</span>
-
-- Built an embedded web server on an ESP32-S3 using LittleFS and esp-httpd to
-  serve a static blog site
-- Developed a custom POSIX shell-based static site generator for content
-  bundling and compression
+- Built a website with an AWS-powered backend for browsing and submitting Magic: The Gathering
+  decklists
 
 ## Education
 
 ### <span>University of Washington Bothell -- BS Computer Science & Software Engineering</span> <span>Sept 2018 -- Aug 2021</span>
 
-- GPA: 3.77 | Courses: Operating Systems, Hardware and Computer Organization,
-  Data Structures and Algorithms
-- As a Teaching Assistant for CSE 180: taught data manipulation, visualization,
-  and statistics
+- GPA: 3.77 | Courses: Operating Systems, Hardware and Computer Organization, Data Structures and
+  Algorithms
+- As a Teaching Assistant for CSE 180: taught data manipulation, visualization, and statistics

@@ -8,18 +8,11 @@
 IoT.**  
 {: .center }
 
-_Maker, open source contributor, hardware conference speaker, and `man` page reader._  
-{: .center .muted }
-
 | Microcontrollers               | Embedded Linux                       | Electronics                               |
 | ------------------------------ | ------------------------------------ | ----------------------------------------- |
 | MISRA C, Embedded Rust         | C, Rust, Scripting (Bash, Python)    | SWD/JTAG, Logic Analyzer, Oscilloscope    |
-| CAN, UART, SPI, I2C, Network   | Yocto, Ansible, OpenTofu (Terraform) | Motors, Sensors, Batteries, Cameras       |
+| CAN, UART, SPI, I2C, Network   | Yocto, Ansible, OpenTofu (Terraform) | Sensors, Motors, Batteries, Cameras       |
 | OTA, Observability, HITL CI/CD | Docker, ROS, systemd, NVIDIA Jetsons | PCB bring-up, manufacture, hardware debug |
-
-_Functional safety experience with IEC 61508 (electronic systems) and ISO 18497 (autonomous
-agricultural machinery)._  
-{: .center }
 
 ---
 
@@ -74,8 +67,6 @@ Current_</span></span>
 
 - Developed interactive AltspaceVR features in Node.js, including virtual games and in-app item
   systems
-
-### <span>Amazon Web Services -- Software Development Engineer I/II</span> <span>Seattle, WA</span>
 
 ## Projects
 

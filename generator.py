@@ -164,8 +164,8 @@ if __name__ == "__main__":
     )
     parser.add_argument(
         "--output-pdf",
-        default="Jonathan_Hendrickson_resume.pdf",
-        help="PDF output file name (default: Jonathan_Hendrickson_resume.pdf)",
+        default="Joni_Hendrickson_resume.pdf",
+        help="PDF output file name (default: Joni_Hendrickson_resume.pdf)",
     )
     parser.add_argument(
         "--chrome-path", help="Path to Chrome or Chromium executable for PDF generation"

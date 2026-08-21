@@ -11,7 +11,7 @@
 | Microcontrollers                   | Embedded Linux                       | Electronics                           |
 | ---------------------------------- | ------------------------------------ | ------------------------------------- |
 | C, Embedded Rust, FreeRTOS, Zephyr | C, Rust, Scripting (Bash, Python)    | SWD/JTAG, Logic Analyzer/Oscilloscope |
-| CAN, UART, SPI, I2C, Network       | Yocto, Ansible, OpenTofu, Tailscale  | Sensors, Motors, Batteries, Cameras   |
+| CAN, UART, SPI, I2C, Network       | Yocto, Ansible, Terraform, Tailscale | Sensors, Motors, Batteries, Cameras   |
 | OTA, Security, QEMU, HITL CI/CD    | Docker, ROS2, systemd, NVIDIA Jetson | PCB bring-up, Manufacture, Debug      |
 
 ---
@@ -22,9 +22,9 @@ _Autonomous electric tractors and other agricultural equipment_
 {: .muted }
 
 - Developed Embedded Linux platform for robotic tractors on NVIDIA Jetson Orin using ROS2, Yocto, and Docker
-- Build fleet management system to deploy, configure, and update network-constrained devices with Qbee
+- Built OpenTofu/Terraform fleet management system to configure and update network-constrained devices with Qbee
 - Implemented patches for perception modules to support multiple NVIDIA library versions (TensorRT/CUDA/cuDNN)
-- Organized firmware projects, including STM32 J939 CAN bus devices, GMSL cameras, LVGL displays, and GPS
+- Organized firmware projects, including STM32 J939 CAN bus devices, GMSL cameras, LVGL display, and GPS
 - Collaborated with electrical, mechanical, and manufacturing engineers to integrate complex machinery
 
 ### <span>Amazon -- Embedded Software Engineer</span> <span>Sept 2021 -- Dec 2025</span>

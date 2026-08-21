@@ -10,7 +10,7 @@ Requires Nix. From the repo root:
 nix run
 ```
 
-Outputs `build/index.html` and `build/Jonathan_Hendrickson_resume.pdf`.
+Outputs `build/index.html` and `build/Joni_Hendrickson_resume.pdf`.
 
 ## Files
 

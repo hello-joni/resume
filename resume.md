@@ -16,7 +16,7 @@
 
 ---
 
-### <span>Bonsai Robotics -- Senior Embedded Platform Engineer</span> <span>Mar 2026 -- Current</span>
+### <span>Bonsai Robotics -- Senior Embedded Platform Engineer</span> <span>Mar 2026 -- Sep 2026</span>
 
 _Autonomous electric tractors and other agricultural equipment_  
 {: .muted }
